@@ -23,6 +23,13 @@ app.use(cookieParser())
 // pode efetuar dentro de um determinado intervalo de tempo
 import { rateLimit } from 'express-rate-limit'
 
+/*
+Vulnerabilidade : API6:2023 - Acesso irrestrito a fluxo de negócios sensíveis. Aqui a quantidade de requisições por usuários é resolvida
+e problemas como verificação se a placa existe tambem nao existe o que pode ser uma grande brecha dentro da regra
+de negocio, dentro de CarForm é mostrada a usuario uma lista de clientes evitando o cadastro de clientes invalidos. nas partes principais
+a vulnerabilidade é evitada mais ainda assim com algumas brechas.
+*/
+
 
 const limiter = rateLimit({
  windowMs: 60 * 1000,    // Intervalo: 1 minuto

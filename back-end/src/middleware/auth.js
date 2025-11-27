@@ -81,5 +81,10 @@ export default function(req, res, next) {
 
     // Token verificado e validado, passamos ao próximo middleware
     next()  
+
+    /*
+    Vulnerabilidade : API2:2023 - Falha de autenticação. Esta vulnerabilidade foi evitada fazendo a verificação do token de
+    autenticação do usuário realiza o tratamento de token invalido ou expirado e nega acesso sem autenticação.
+    */
   })
 }

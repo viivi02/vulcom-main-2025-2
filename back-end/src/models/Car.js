@@ -67,4 +67,9 @@ const Car = z.object({
   customer_id: z.coerce.number().nullable().optional()
 })
 
+/*
+Vulnerabilidade : API8:2023 - Má configuração de segurança. Vulnerabilidade evitada pois o Zod faz a verificacao de dados que serão preenchidos
+e limita caracteres e cadastro de dados inválidos em campos específicos.
+*/
+
 export default Car

@@ -79,6 +79,11 @@ async function handleStartClick() {
              stopRef.current = true
              break
            }
+
+           /*
+           Vulnerabilidade: API2:2023 - falha de autenticação. Resolvida adicionando um breakpoint em caso de ataques de 
+           BruteForce na qual limita a quantidade de tentativas em 5 e interrompe requisições posteriores
+           */
          } else {
            consecutive429 = 0
          }

@@ -237,5 +237,10 @@ controller.logout = function(req, res) {
   res.status(204).end()
 }
 
+/*
+Vulnerabilidade: API3: 2023: falha de autenticação a nivel de propriedade. A vulnerabilidade foi evitada ajustanto os controllers 
+para que somente usuários administradores possam modificar e até mesmo excluir dados de outros usuários, presente na primeira verificação
+dos metodos create, delete, updade, retrieveAll e retrieveOne. 
+*/
 
 export default controller
